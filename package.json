@@ -1,0 +1,51 @@
+{
+  "name": "rift.io",
+  "description": "Pure magic.",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": {
+    "name": "alexfreska",
+    "email": "alex.freska@gmail.com"
+  },
+  "dependencies": {
+    "express": "latest",
+    "path": "~0.4.9",
+    "mongoose": "latest",
+    "underscore": "latest",
+    "jquery": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/rift.io",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit",
+    "install1": "npm i -g grunt-cli",
+    "install2": "npm i -g grunt-init"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "keywords": [],
+  "preferGlobal": "true",
+  "bin": {
+    "rift": "lib/rift.io.js"
+  }
+}
