@@ -5,9 +5,10 @@ Pure magic.
 ## Getting Started
 Install the module with: `npm install rift.io`
 
-```javascript
-var rift_io = require('rift.io');
-rift_io.awesome(); // "awesome"
+```console
+$ rift create image.png
+Rift token: b97bab5e1449f9fc7b859583776503aa
+Copied to Clipboard!
 ```
 
 ## Documentation
