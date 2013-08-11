@@ -12,7 +12,9 @@
     "path": "~0.4.9",
     "mongoose": "latest",
     "underscore": "latest",
-    "jquery": "latest"
+    "jquery": "latest",
+    "crypto": "latest",
+    "portscanner": "latest"
   },
   "repository": {
     "type": "git",
