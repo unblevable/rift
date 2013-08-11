@@ -1,9 +1,10 @@
 # rift.io
 
-Pure magic.
+The file goes from you to me.
+The rest is pure magic.
 
 ## Getting Started
-Install the module with: `npm install rift.io`
+Install the module with: `sudo npm install -g rift.io`
 
 ```console
 $ rift create image.png
