@@ -1,7 +1,7 @@
 # rift.io
 > File transfer via rifts.
 
-**Really instant file transfer** (**rift.io**) is a peer-to-peer file transfer command line tool. It requires minimal setup and does not involve the inconveniences of file size limits or authentication procedures. As a bonus, you receive the benefits of tab completion and integration with the CLI tool belt.
+**Really instant file transfer** (<strong>rift.io</strong>) is a peer-to-peer file transfer command line tool. It requires minimal setup and does not involve the inconveniences of file size limits or authentication procedures. As a bonus, you receive the benefits of tab completion and integration with the CLI tool belt.
 
 ## Command Line
 
