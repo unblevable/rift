@@ -62,7 +62,9 @@ Get file(s) from an associated token.
 
 #### I/O Redirection
 
-    $ cat main.c | rift create
+```console
+$ cat main.c | rift create
+```
 
 ## Disclaimer
 
