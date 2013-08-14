@@ -1,0 +1,115 @@
+#!/usr/bin/env node
+
+var _           = require('underscore'),
+    optimist    =  require('optimist');
+
+var argv = optimist
+            .usage(usage)
+
+            .alias('h', 'help')
+            .alias('P', 'password')
+            .alias('p', 'port')
+            .alias('r', 'ridiculous')
+            .alias('t', 'timeout')
+            .alias('v', 'verbose')
+
+            .default('p', 8080)
+            .default('t', 60)
+
+            .argv,
+     usage = [
+        'Usage: rift [command] [options]',
+        '',
+        'Commands:',
+        '',
+        '  create [path]                create a rift to send file(s)',
+        '  collect [token]              get file(s) from an associated token',
+        '',
+        'Options:',
+        '',
+        '  -h, --help                   output usage information',
+        '  -P, --password [password]    encrypt/decrypt data with a password',
+        '  -p, --port [port]            access port [8080]',
+        '  -r, --ridiculous             output flavorfully',
+        '  -t, --timeout                timeout rift in [60] seconds',
+        '  -v, --verbose                output extraneously',
+        '',
+    ].join('\n');
+
+var port = argv.p,
+    timeout = argv.t,
+    hasInvalidOption = false;
+
+// quick and dirty way of checking for an invalid option
+_(argv).each(function (value, arg) {
+    if (!_([
+            'h', 'help',
+            'P', 'password',
+            'p', 'port',
+            'r', 'ridiculous',
+            't', 'timeout',
+            'v', 'verbose',
+            '_',
+            '$0'
+        ]).contains(arg)) {
+        hasInvalidOption = true;
+    }
+});
+
+// output usage on no commands, too many commands or 'help' option
+// the 6 arguments that always exist are p, port, t, timeout, _ and $0
+if (!argv._.length || (argv._.length > 1) || argv.h) {
+    exit();
+}
+
+if (hasInvalidOption) {
+    complain('invalid option(s)');
+}
+
+if (argv.P) {
+    console.log('password');
+}
+
+if (argv.p) {
+    if (!_(argv.p).isNumber()) {
+        complain('port must be a number');
+    }
+    console.log(argv.p);
+    console.log('port');
+}
+
+if (argv.r) {
+    console.log('ridiculous');
+}
+
+if (argv.t) {
+    if (!_(argv.t).isNumber()) {
+        complain('timeout must be a number');
+    }
+    console.log('timeout');
+}
+
+if (argv.v) {
+    console.log('verbose');
+}
+
+switch (argv._[0]) {
+    case 'create':
+        console.log('create');
+        break;
+    case 'collect':
+        console.log('collect');
+        break;
+    default:
+        complain('invalid command');
+};
+
+function exit () {
+    console.log(usage);
+    process.exit(0);
+}
+
+function complain (phrase) {
+    console.log('Error: ' + phrase + '. Use -h for help');
+    process.exit(0);
+}

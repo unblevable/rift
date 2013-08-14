@@ -12,7 +12,8 @@
     "underscore": "latest",
     "jquery": "latest",
     "crypto": "latest",
-    "portscanner": "latest"
+    "portscanner": "latest",
+    "optimist": "latest"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,6 @@
   "keywords": [],
   "preferGlobal": "true",
   "bin": {
-    "rift": "lib/rift.io.js"
+    "rift": "./bin/rift"
   }
 }
