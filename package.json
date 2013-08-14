@@ -8,9 +8,7 @@
     "email": "alex.freska@gmail.com"
   },
   "dependencies": {
-    "express": "latest",
     "path": "~0.4.9",
-    "mongoose": "latest",
     "underscore": "latest",
     "jquery": "latest",
     "crypto": "latest",
