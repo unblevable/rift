@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "homepage": "",
   "author": {
-    "name": "alexfreska",
-    "email": "alex.freska@gmail.com"
+    "name": "Brian Le",
+    "email": "blsymph@gmail.com"
   },
   "dependencies": {
     "path": "~0.4.9",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/unblevable/rift"
   },
   "bugs": {
     "url": ""
