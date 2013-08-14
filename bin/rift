@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 var _           = require('underscore'),
-    optimist    =  require('optimist');
+    optimist    = require('optimist'),
+
+    Rift        = require('../lib/rift');
 
 var argv = optimist
             .usage(usage)
@@ -40,7 +42,7 @@ var port = argv.p,
     timeout = argv.t,
     hasInvalidOption = false;
 
-// quick and dirty way of checking for an invalid option
+// quick and dirty way of checking for invalid options
 _(argv).each(function (value, arg) {
     if (!_([
             'h', 'help',

@@ -1,6 +1,6 @@
 {
-  "name": "rift.io",
-  "description": "Pure magic.",
+  "name": "rift",
+  "description": "Transfer files via rifts..",
   "version": "0.0.1",
   "homepage": "",
   "author": {
@@ -28,7 +28,7 @@
       "url": "/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/rift.io",
+  "main": "./lib/rift",
   "engines": {
     "node": ">= 0.8.0"
   },
